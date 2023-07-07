@@ -1,0 +1,502 @@
+@font-face {
+    font-family: Helvetica;
+    src: url(Fonts/Helvetica.ttf);
+}
+@font-face {
+    font-family: Helvetica;
+    src: url(Fonts/Helvetica-Bold.ttf);
+    font-weight: bold;
+}
+body {
+        font-family: Helvetica, "Open Sans", sans-serif;
+        margin: 0;
+    }
+
+    .dark-mode {
+        background-color: #333;
+        color: white;
+    }
+    
+    .dark-mode > nav {
+        background-color: #333;
+        color: white;
+        border-bottom: 2px solid white;
+    }
+
+    .dark-mode > nav a {
+        color: white;
+    }
+
+    section {
+        margin: 0 16px;
+    }
+    
+    section.full-screen {
+        margin: 0;
+    }
+    
+    nav {
+        position: fixed;
+        background-color: white;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        height: 52px;
+        border-bottom: 2px solid #222;
+        z-index: 99999;
+    }
+
+    /* The Switch - the box around the slider */
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 36px;
+        height: 22px;
+    }
+
+    /* Hide HTML Checkbox */
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    /* Slider */
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+    }
+
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 14px;
+        width: 14px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+    }
+    input:checked + .slider {
+        background-color: #2196f3;
+    }
+
+    input:focus + .slider {
+        box-shadow: 0 0 1px #2196f3;
+    }
+    
+    input:checked + .slider::before {
+        -webkit-transform: translateX(14px);
+        -ms-transform: translateX(14px);
+        transform: translateX(14px);
+    }
+
+    /* Rounded Sliders */
+    .slider.round {
+        border-radius: 34px;
+    }
+
+    .slider.round:before {
+        border-radius: 50%;
+    }
+
+    nav a {
+        color: #222;
+        text-decoration: none;
+    }
+
+    nav > #dark-mode-switch {
+        display: flex;
+        margin-left: 20px;
+        margin-right: 16px;
+    }
+
+    nav > #dark-mode-switch > p {
+        margin-right: 8px;
+    }
+
+    nav > ul {
+        margin-left: auto;
+        margin-right: 16px;
+    }
+    
+    nav > ul > a {
+        display: inline-block;
+    }
+    
+    nav > span > img {
+        height: 32px;
+        width: auto;
+        padding: 8px;
+    }
+    
+    nav > span {
+        display: flex;
+        align-items: center;
+    }
+    
+    #toggle {
+        display: none;
+    }
+    
+    /**
+        Hamburger
+    **/
+    .hamburger {
+        position: absolute;
+        top: 5em;
+        right: 4%;
+        margin-left: -2em;
+        margin-top: -80px;
+        width: 30px;
+        z-index: 5;
+    }
+    
+    .hamburger div {
+        position: relative;
+        width: 3em;
+        height: 7px;
+        border-radius: 3px;
+        background-color: #8b0000;
+        margin-top: 8px;
+        transition: all 0.3s ease-in-out;
+    }
+
+.desktop {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #8B0000;
+    top: -100%; left: 0; right: 0; bottom: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    transform: scale(0);
+}
+.nav-wrapper {
+    position: relative;
+    overflow: hidden;
+    overflow-y: auto;
+    height: 100%;
+}
+.desktop {
+    text-align: left;
+    margin-left: 25%;
+}
+.desktop a {
+    position: relative;
+    text-decoration: none;
+    color: #f5f5f5;
+    font-size: 2em;
+    display: inline-block;
+    margin-top: 1.25em;
+    transition: color 0.25s ease-in-out;
+    letter-spacing: 1px;
+}
+.desktop a:before {
+    content: '';
+    height: 0;
+    position: absolute;
+    width: 0.25em;
+    background-color: white;
+    left: -0.5em;
+    transition: all 0.2s ease-in-out;
+}
+.desktop a:hover {
+    color: white;
+}
+.desktop a:hover::before {
+    height: 100%;
+}
+
+/**
+Animation
+**/
+
+#toggle:checked + .hamburger .top-bun {
+    transform: rotate(-45deg);
+    margin-top: 25px;
+    }
+#toggle:checked + .hamburger .bottom-bun {
+    opacity: 0;
+    transform: rotate(45deg);
+    }
+#toggle:checked + .hamburger .meat {
+    transform: rotate(45deg);
+    margin-top: -7px;
+    }
+#toggle:checked + .hamburger + .desktop {
+    top: 0;
+    transform: scale(1);
+    }
+    
+header {
+    text-align: center;
+    color: white;
+    background-color: #222;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 48px;
+    background-image: url("Images/TaylorsEras.webp");
+    background-position: top center;
+    background-size: cover;
+}
+nav .circle-red {
+    font-size: 8px;
+    background-color: maroon;
+    border-radius: 100%;
+    width: 16px;
+    height: 16px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 8px;
+    right: -8px;
+    }
+
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 300%;
+    }
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+    .relative-container {
+        position: relative;
+    }
+    
+    header h1 {
+        font-weight: bold;
+        margin: 16px;
+        animation-duration: 3s;
+        animation-name: slidein;
+        text-shadow: 2px 2px #222;
+    }
+    
+    header p {
+        margin: 0;
+        text-shadow: 2px 2px #222;
+    }
+    
+    img {
+        width: 100%;
+    }
+    
+    h2 {
+        font-weight: 700;
+        text-align: center;
+    }
+    
+    #section-video .flex-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #eras-tour-facts .flex-container figure {
+        text-align: center;
+    }
+    
+    #eras-tour-facts .flex-container img {
+        height: 240px;
+        width: auto;
+    }
+    
+    #Taylor-Swift-Photo .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 8px;
+        grid-auto-rows: 240px 240px 240px 240px;
+    }
+    
+    #Taylor-Swift-Photo .grid-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .grid-container #item-1 {
+        grid-column: 1 / 2 span;
+        grid-row: 1;
+    }
+    
+    fieldset {
+        margin: 16px 0px;
+        border-radius: 4px;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        width: 100%;
+        padding: 4px 4px;
+        margin: 8px 0;
+        display: block;
+    }
+
+    input[type="date"] {
+        margin: 8px 0;
+        display: block;
+    }
+    
+    #form-section {
+        background-color: #333;
+        color: white;
+        padding: 8px;
+        margin-top: 16px;
+    }
+    
+    #form-section form {
+        max-width: 480px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    button[type="submit"] {
+        color: white;
+        background-color: transparent;
+        border: 1px solid white;
+        border-radius: 4px;
+        width: 100%;
+        padding: 8px 16px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    
+    .Taylor-Swift-Photo-Item {
+        filter: grayscale(100%);
+        cursor: pointer;
+    }
+
+    .Taylor-Swift-Photo-Item:hover {
+        filter: grayscale(0);
+        transition-property: filter;
+        transition-duration: 1s;
+    }
+
+/* Carousel */
+.Moreofera {
+    padding: 6% 2% 62% 2%;
+}
+
+.Carousel-Taylor {
+    position: relative;
+    max-width: 150rem;
+    margin: auto;
+}
+
+.slider {
+    display: flex;
+    aspect-ratio: 16 / 9;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 3rem -0.75rem;
+    border-radius: 0.5rem;
+}
+
+.slider img {
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+}
+
+.Slider-nav {
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.dot {
+    cursor: pointer;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: midnightblue;
+    opacity: 0.50;
+    transition: opacity ease 150ms;
+}
+
+.active, .dot:hover {
+    opacity: 1;
+}
+
+    /* for tablet and desktop */
+    @media only screen and (min-width: 768px) {
+        #eras-tour-facts > .flex-container {
+            display: flex;
+            align-items: center;
+        }
+    
+        #eras-tour-facts > .flex-container figure {
+            margin-left: auto;
+        }
+
+        #eras-tour-facts > .flex-container figure img {
+            height: 400px;
+        }
+    
+        #eras-tour-facts > .flex-container figcaption {
+            text-align: center;
+            margin-top: 16px;
+        }
+    
+        #eras-tour-facts > .flex-container.row-reverse {
+            flex-direction: row-reverse;
+        }
+    
+        #eras-tour-facts > .flex-container.row-reverse p {
+            margin-left: 32px;
+        }
+    
+        #eras-tour-facts > .flex-container.row-reverse figure {
+            margin-left: 40px;
+            min-width: 320px;
+        }
+    }
+    
+    iframe {
+        max-width: 480px;
+    }
+    
+    #Taylor-Swift-Photo .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 16px;
+        grid-auto-rows: 320px 320px;
+    }
+    
+    #Taylor-Swift-Photo .grid-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .grid-container #item-1 {
+        grid-column: 1;
+        grid-row: 1 / 2 span;
+    }
+    
+    .grid-container #item-2 {
+        grid-row: 1;
+        grid-column: 2 / 3 span;
+    }
