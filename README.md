@@ -8,7 +8,7 @@
 3. After step 2 is done, the web will lead you to Team overview page.
 4. Click Add New Site and it will appear 3 option such as; Import an existing project, Start from a template and Deploy Manually. For this one I click Import an existing project from my own GitHub repository.
 5. On Connect to Git provider, click GitHub.
-   ![Register Netlify]([Images/Readme Documentation/Register Netlify #5.png](https://github.com/RevoU-FSSE-2/week-4-febriaaan22/blob/main/Images/Readme%20Documentation/Register%20Netlify%20%235.png))
+   ![Register Netlify](https://github.com/RevoU-FSSE-2/week-4-febriaaan22/blob/main/Images/Readme%20Documentation/Register%20Netlify%20%235.png))
 7. Pick a repository from your GitHub, choose Branch to deploy based on your GitHub branch and click Deploy Site
 8. Wait until the deploying proccess finish and you had your own website.
 
