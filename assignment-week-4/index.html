@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="A website of The Eras Tour">
+    <meta name="keywords" content="HTML, CSS, Javascript">
+    <meta name="author" content="Ireng Febrian Sanjaya">
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <title>The Eras Tour</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="responsive.css" />
+    <link
+        rel="icon"
+        href="https://people.com/thmb/jTOba_mtjMvMigpwdoxz0byNuP8=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(999x0:1001x2):format(webp)/taylor-swift-rain-eras-tour-052223-6-cf341ac7c40649d2b39f072043488773.jpg"
+        type="image/x-icon" />
+</head>
+<body>
+    <nav>
+        <span class="relative-container">
+            <img src="Images/The_Eras_Tour_Logo.webp" alt="The Eras Tour Logo" />
+            <b>The Eras Tour</b>
+            <span class="circle-red">13</span>
+        </span>
+        <input id="toggle" type="checkbox"></input>
+        <label for="toggle" class="hamburger">
+            <div class="top-bun"></div>
+            <div class="meat"></div>
+            <div class="bottom-bun"></div>
+        </label>
+        <ul class="desktop">
+            <ul class="nav-wrapper">
+            <a href="#">Home</a><br>
+            <a href="#">Tour</a><br>
+            <a href="#">Store</a><br>
+            <a href="#">Announcement</a><br>
+            </ul>
+        </ul>
+        <Span id="dark-mode-switch">
+            <p>Dark Mode</p>
+            <label class="switch">
+                <input id="checkbox-dark-mode"
+                onchange="toggleDarkMode()"
+                type="checkbox">
+                <span class="slider round"></span>
+            </label>
+        </Span>
+    </nav>
+    <header class="full-screen" id="header">
+        <h1>The Eras Tour Experience</h1>
+        <p>Taylor Swift's Eras Tour kick off in Nashville, Tennessee</p>
+    </header>
+    <main>
+        <section id="Taylor-Swift-Photo">
+            <h2>Taylor's Photo</h2>
+            <div class="grid-container">
+                <div class="Taylor-Swift-Photo-Item" id="item-1">
+                    <img 
+                    src="Images/Taylor Swift 1.webp"
+                    alt="Taylor Swift Performing All Too Well (10 Minutes Version)"
+                    width="auto"
+                    height="auto"/>
+                </div>
+                <div class="Taylor-Swift-Photo-Item" id="item-2">
+                    <img 
+                    src="Images/Taylor Swift 2.webp"
+                    alt="Taylor Swift during Folklore Era" 
+                    width="auto"
+                    height="auto"/>
+                </div>
+                <div class="Taylor-Swift-Photo-Item" id="item-3">
+                    <img 
+                    src="Images/Taylor Swift 3.webp"
+                    alt="Taylor Swift Performing 22" 
+                    width="auto"
+                    height="auto"/>
+                </div>
+                <div class="Taylor-Swift-Photo-Item" id="item-4">
+                    <img 
+                    src="Images/Taylor Swift 4.webp"
+                    alt="Taylor Swift Peforming ...Ready for it?" 
+                    width="auto"
+                    height="auto"/>
+                </div>
+                <div class="Taylor-Swift-Photo-Item" id="item-5">
+                    <img 
+                    src="Images/Taylor Swift 5.webp"
+                    alt="Taylor Swift Perfoming Acoustic Set" 
+                    width="auto"
+                    height="auto"/>
+                </div>
+            </div>
+        </section>
+        
+        <section class="Moreofera">
+            <div class="Carousel-Taylor">
+                <div class="slider">
+                    <img id="Slide-1"
+                    src="Images/RainShow1.webp"
+                    alt="Taylor performing August during Folklore Set" />
+                    <img id="Slide-2"
+                    src="Images/LoverSet.webp"
+                    alt="Cruel Summer" />
+                    <img id="Slide-3"
+                    src="Images/MidnightSet.webp"
+                    alt="Taylor Performing Vigilante Shit on Midnights Era" />
+                </div>
+                <div class="Slider-nav">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+            </div>
+        </section>
+
+        <section id="Eras-Tour-Facts">
+            <h2>Facts about The Eras Tour</h2>
+            <div class="flex-container">
+                <ul>
+                    <li>Taylor Swift became the First Artist in History to play multiple sold out stadium show in the United States</li>
+                    <li>Taylor Swift became the First Solo Artist in Singapore History to play 3 show in a single tour</li>
+                    <li>Taylor Swift breaking the record for the most attandance in Metlife Stadium History</li>
+                    <li>The Eras Tour is projected the US Leg to finish with $700 Million</li>
+                    <li>The Eras Tour playing 44 songs, 10 different acts, and 200 minutes of running time</li>
+                </ul>
+                <figure>
+                    <picture>
+                        <source
+                        media="(max-width: 480px)"
+                        srcset="Images/the-man.webp"
+                        >
+                    <img src="Images/The Man.webp"
+                    alt="During 'The Man', swift uses scaffolding and office props to emulate a corporate environment"
+                    />
+                    </picture>
+                    <figcaption>Taylor Swift performing <em>The Man</em> with office props to emulate a corporate</figcaption>
+                </figure>
+            </div>
+    </section>
+    <section id="section-video">
+        <h2>Footage of Swift stage diving act</h2>
+        <div class="flex-container">
+            <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/RJtw7d14Pus"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen /
+            >
+            </iframe>
+        </div>
+    </section>
+    <section id="form-section">
+        <h2>Register Here to Buy The Eras Tour Ticket</h2>
+        <form action="#">
+            <fieldset>
+                <legend>Personal Data:</legend>
+                <div>
+                    <label for="fullname">Full Name:</label>
+                    <input id="fullname" type="text" required />
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input id="email" type="email" required />
+                </div>
+                <div>
+                    <label for="dob">Date of Birth</label>
+                    <input
+                    type="date"
+                    id="dob"
+                    name="trip-start"
+                    value="2000-02-22"
+                    />
+                </div>
+                <div>
+                    <p>Are you living in Singapore?</p>
+                    <input type="radio" id="yes" name="isSingapore" value="Male">
+                    <label for="yes">Yes</label>
+                    <input type="radio" id="no" name="isSingapore" value="Female">
+                    <label for="no">No</label>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Additional Information:</legend>
+                <div>
+                    <p>How do you feel about The Eras Tour?</p>
+                    <input
+                    id="spectacular"
+                    type="checkbox"
+                    name="experience"
+                    value="spectacular"
+                    />
+                    <label for="spectacular">spectacular</label>
+                    <input
+                    id="impressive"
+                    type="checkbox"
+                    name="experience"
+                    value="impressive"
+                    />
+                    <label for="impressive">Impressive</label>
+                    <input
+                    id="ambitious"
+                    type="checkbox"
+                    name="experience"
+                    value="ambitious"
+                    />
+                    <label for="ambitious">Ambitious</label>
+                </div>
+                <div>
+                    <p><label for="EraReview">Tell us why you love the Eras Tour:</label></p>
+                    <textarea id="EraReview" name="EraReview" rows="6"></textarea>
+                </div>
+                <div>
+                    <p>Upload your Favorite Taylor Swift eras photo here:</p>
+                    <input
+                    type="file"
+                    id="photo"
+                    name="myErasPhoto"
+                    required
+                    accept="image/png, image/jpeg"
+                    />
+                    <input type="submit">
+                </div>
+            </fieldset>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+    </main>
+
+    <script>
+        // initial state
+        if (localStorage.getItem("darkMode") === "true") {
+            document.getElementById("checkbox-dark-mode").checked = true;
+            document.body.classList.add('dark-mode');
+        }
+
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+            if (!document.getElementById("checkbox-dark-mode").checked) {
+                localStorage.setItem("darkMode", false);
+            } else {
+                localStorage.setItem("darkMode", true);
+            }
+        }
+    </script>
+</body>
+</html>
