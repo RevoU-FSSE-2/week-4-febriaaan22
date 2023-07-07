@@ -53,8 +53,9 @@
 
 
 
-This project is far from perfect and I need your feedback to improve this project
-Contact Me
+This project is far from perfect and I need your feedback to improve this project <br>
+<br>
+Contact Me: <br>
 Phone: 0821-3611-1204 <br>
 [Email 1](febriansajaya22@gmail.com) / [Email 2](febriansanjaya22@gmail.com) <br>
 [Linkedin](http://linkedin.com/in/ireng-febrian-sanjaya-6a79211a7)
